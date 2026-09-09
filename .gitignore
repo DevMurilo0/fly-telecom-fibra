@@ -1,0 +1,27 @@
+# Generated distribution; the root website is committed and ready to open.
+dist/
+node_modules/
+.cache/
+coverage/
+*.log
+*.tmp
+*.temp
+*.bak
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.agents/
+.codex/
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+service-account*.json
+
+# Research snapshot retained locally, not part of the published project
+docs/source-official.html

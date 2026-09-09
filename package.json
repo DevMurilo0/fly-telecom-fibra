@@ -1,0 +1,14 @@
+{
+  "name": "fly-telecom-fibra",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.js && node scripts/serve.js",
+    "start": "npm run dev",
+    "build": "node scripts/build.js",
+    "preview": "node scripts/serve.js",
+    "test": "node tests/site.test.js && node tests/static.test.js",
+    "check": "node --check src/app.js && node --check src/render.js && npm run build && node --check js/main.js && npm test"
+  }
+}
