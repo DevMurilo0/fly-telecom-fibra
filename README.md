@@ -71,7 +71,13 @@ gh repo create fly-telecom-fibra --public --source=. --remote=origin --push
 
 Esse comando é para um repositório ainda sem `origin`. Se um remote já estiver configurado, confira-o com `git remote -v` e use `git push -u origin main`, sem force push.
 
-### Netlify e Vercel
+### Vercel
+
+O `vercel.json` configura o projeto como estático, sem framework, instalação de dependências ou build, e define `.` (a raiz) como diretório de saída. A entrada principal continua sendo `index.html`, com CSS, JavaScript e assets nos caminhos relativos existentes. Não é necessário criar `public/` ou gerar `dist/` para esse deploy.
+
+Mantenha **Root Directory** na raiz do repositório. As opções do `vercel.json` substituem os comandos e o diretório de saída das configurações do projeto na Vercel, incluindo uma eventual configuração antiga apontando para `public`.
+
+### Netlify
 
 Selecione um projeto estático, sem framework. Use `npm run build` como comando de build e `dist` como diretório de saída. O Netlify também permite enviar diretamente a pasta `dist/`.
 
